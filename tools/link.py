@@ -493,6 +493,7 @@ def setup_pthreads():
 
   if settings.EMBIND:
     settings.REQUIRED_EXPORTS.append('_embind_initialize_bindings')
+    building.user_requested_exports.add('__embind_initialize_bindings')
 
   if settings.MAIN_MODULE:
     settings.REQUIRED_EXPORTS += [
